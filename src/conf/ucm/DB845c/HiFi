@@ -6,13 +6,7 @@ SectionVerb {
 	EnableSequence [
 		cdev "hw:0"
 		cset "name='SLIM RX0 MUX' AIF1_PB"
-		cset "name='SLIM RX1 MUX' ZERO"
-		cset "name='SLIM RX2 MUX' ZERO"
-		cset "name='SLIM RX3 MUX' ZERO"
-		cset "name='SLIM RX4 MUX' ZERO"
-		cset "name='SLIM RX5 MUX' ZERO"
-		cset "name='SLIM RX6 MUX' ZERO"
-		cset "name='SLIM RX7 MUX' ZERO"
+		cset "name='CDC_IF RX0 MUX' SLIM RX0"
 		cset "name='RX INT7_1 MIX1 INP0' RX0"
 		cset "name='RX INT8_1 MIX1 INP0' RX0"
 		## gain to  0dB
@@ -35,8 +29,8 @@ SectionVerb {
 	# ALSA PCM
 	Value {
 		# ALSA PCM device for HiFi
-		PlaybackPCM "plughw:0,1"
-		CapturePCM "plughw:0,2"
+		PlaybackPCM "hw:0,1"
+		CapturePCM "hw:0,2"
 	}
 }
 
@@ -46,13 +40,7 @@ SectionDevice."Speakers" {
 	EnableSequence [
 		cdev "hw:0"
 		cset "name='SLIM RX0 MUX' AIF1_PB"
-		cset "name='SLIM RX1 MUX' ZERO"
-		cset "name='SLIM RX2 MUX' ZERO"
-		cset "name='SLIM RX3 MUX' ZERO"
-		cset "name='SLIM RX4 MUX' ZERO"
-		cset "name='SLIM RX5 MUX' ZERO"
-		cset "name='SLIM RX6 MUX' ZERO"
-		cset "name='SLIM RX7 MUX' ZERO"
+		cset "name='CDC_IF RX0 MUX' SLIM RX0"
 		cset "name='RX INT7_1 MIX1 INP0' RX0"
 		cset "name='RX INT8_1 MIX1 INP0' RX0"
 		## gain to  0dB

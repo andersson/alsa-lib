@@ -3,17 +3,17 @@
 
 SectionVerb {
         EnableSequence [
-			cdev "hw:0"
-			cset "name='QUAT_MI2S_RX Audio Mixer MultiMedia1' 1"
+		cdev "hw:0"
+		cset "name='QUAT_MI2S_RX Audio Mixer MultiMedia1' 1"
         ]
 
         DisableSequence [
-			cdev "hw:0"
-			cset "name='QUAT_MI2S_RX Audio Mixer MultiMedia1' 0"
-		]
-        Value {
+		cdev "hw:0"
+		cset "name='QUAT_MI2S_RX Audio Mixer MultiMedia1' 0"
+	]
+       Value {
                 TQ "HiFi"
-                PlaybackPCM "plughw:0,0"
+                PlaybackPCM "hw:0,0"
         }
 }
 
@@ -22,13 +22,13 @@ SectionDevice."HDMI-stereo" {
         Comment "HDMI Digital Stereo Output"
 
         EnableSequence [
-			cdev "hw:0"
-			cset "name='QUAT_MI2S_RX Audio Mixer MultiMedia1' 1"
+		cdev "hw:0"
+		cset "name='QUAT_MI2S_RX Audio Mixer MultiMedia1' 1"
         ]
 
         DisableSequence [
-			cdev "hw:0"
-			cset "name='QUAT_MI2S_RX Audio Mixer MultiMedia1' 0"
+		cdev "hw:0"
+		cset "name='QUAT_MI2S_RX Audio Mixer MultiMedia1' 0"
         ]
 
         Value {
