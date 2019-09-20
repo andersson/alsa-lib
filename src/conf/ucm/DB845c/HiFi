@@ -4,7 +4,7 @@
 SectionVerb {
 
 	EnableSequence [
-		cdev "hw:0"
+		cdev "hw:DB845c"
 		cset "name='SLIM RX0 MUX' AIF1_PB"
 		cset "name='CDC_IF RX0 MUX' SLIM RX0"
 		cset "name='RX INT7_1 MIX1 INP0' RX0"
@@ -21,7 +21,7 @@ SectionVerb {
 	]
 
 	DisableSequence [
-                cdev "hw:0"
+                cdev "hw:DB845c"
 		cset "name='SLIMBUS_0_RX Audio Mixer MultiMedia2' 0"
 		cset "name='MultiMedia3 Mixer SLIMBUS_0_TX' 0"
 	]
@@ -29,8 +29,8 @@ SectionVerb {
 	# ALSA PCM
 	Value {
 		# ALSA PCM device for HiFi
-		PlaybackPCM "hw:0,1"
-		CapturePCM "hw:0,2"
+		PlaybackPCM "hw:DB845c,1"
+		CapturePCM "hw:DB845c,2"
 	}
 }
 
@@ -38,7 +38,7 @@ SectionDevice."Speakers" {
 	Comment "Speakers playback"
 
 	EnableSequence [
-		cdev "hw:0"
+		cdev "hw:DB845c"
 		cset "name='SLIM RX0 MUX' AIF1_PB"
 		cset "name='CDC_IF RX0 MUX' SLIM RX0"
 		cset "name='RX INT7_1 MIX1 INP0' RX0"
@@ -58,7 +58,7 @@ SectionDevice."Speakers" {
 	]
 
 	DisableSequence [
-		cdev "hw:0"
+		cdev "hw:DB845c"
 		cset "name='RX0 Digital Volume' 0"
 		cset "name='SLIM RX0 MUX' ZERO"
 		cset "name='COMP7 Switch' 0"
@@ -74,117 +74,5 @@ SectionDevice."Speakers" {
 
 	Value {
 		PlaybackChannels "2"
-	}
-}
-
-SectionDevice."DMIC0" {
-	Comment "Digital Microphone0"
-
-	EnableSequence [
-		cdev "hw:0"
-		cset "name='MultiMedia3 Mixer SLIMBUS_0_TX' 1"
-		cset "name='AIF1_CAP Mixer SLIM TX0' 1"
-		cset "name='CDC_IF TX0 MUX' DEC0"
-		cset "name='ADC MUX0' DMIC"
-		cset "name='DMIC MUX0' DMIC0"
-		cset "name='DEC0 Volume' 68"
-	]
-
-	DisableSequence [
-		cdev "hw:0"
-		cset "name='AIF1_CAP Mixer SLIM TX0' 0"
-		cset "name='CDC_IF TX0 MUX' ZERO"
-		cset "name='ADC MUX0' ZERO"
-		cset "name='DMIC MUX0' ZERO"
-		cset "name='DEC0 Volume' 0"
-		cset "name='MultiMedia3 Mixer SLIMBUS_0_TX' 0"
-	]
-
-	Value {
-		CaptureChannels "1"
-	}
-}
-
-SectionDevice."DMIC1" {
-	Comment "Digital Microphone1"
-
-	EnableSequence [
-		cdev "hw:0"
-		cset "name='MultiMedia3 Mixer SLIMBUS_0_TX' 1"
-		cset "name='AIF1_CAP Mixer SLIM TX0' 1"
-		cset "name='CDC_IF TX0 MUX' DEC0"
-		cset "name='ADC MUX0' DMIC"
-		cset "name='DMIC MUX0' DMIC1"
-		cset "name='DEC0 Volume' 68"
-	]
-
-	DisableSequence [
-		cdev "hw:0"
-		cset "name='AIF1_CAP Mixer SLIM TX0' 0"
-		cset "name='CDC_IF TX0 MUX' ZERO"
-		cset "name='ADC MUX0' ZERO"
-		cset "name='DMIC MUX0' ZERO"
-		cset "name='DEC0 Volume' 0"
-		cset "name='MultiMedia3 Mixer SLIMBUS_0_TX' 0"
-	]
-
-	Value {
-		CaptureChannels "1"
-	}
-}
-
-SectionDevice."DMIC2" {
-	Comment "Digital Microphone0"
-
-	EnableSequence [
-		cdev "hw:0"
-		cset "name='MultiMedia3 Mixer SLIMBUS_0_TX' 1"
-		cset "name='AIF1_CAP Mixer SLIM TX0' 1"
-		cset "name='CDC_IF TX0 MUX' DEC0"
-		cset "name='ADC MUX0' DMIC"
-		cset "name='DMIC MUX0' DMIC2"
-		cset "name='DEC0 Volume' 68"
-	]
-
-	DisableSequence [
-		cdev "hw:0"
-		cset "name='AIF1_CAP Mixer SLIM TX0' 0"
-		cset "name='CDC_IF TX0 MUX' ZERO"
-		cset "name='ADC MUX0' ZERO"
-		cset "name='DMIC MUX0' ZERO"
-		cset "name='DEC0 Volume' 0"
-		cset "name='MultiMedia3 Mixer SLIMBUS_0_TX' 0"
-	]
-
-	Value {
-		CaptureChannels "1"
-	}
-}
-
-SectionDevice."DMIC4" {
-	Comment "Digital Microphone0"
-
-	EnableSequence [
-		cdev "hw:0"
-		cset "name='MultiMedia3 Mixer SLIMBUS_0_TX' 1"
-		cset "name='AIF1_CAP Mixer SLIM TX0' 1"
-		cset "name='CDC_IF TX0 MUX' DEC0"
-		cset "name='ADC MUX0' DMIC"
-		cset "name='DMIC MUX0' DMIC3"
-		cset "name='DEC0 Volume' 68"
-	]
-
-	DisableSequence [
-		cdev "hw:0"
-		cset "name='AIF1_CAP Mixer SLIM TX0' 0"
-		cset "name='CDC_IF TX0 MUX' ZERO"
-		cset "name='ADC MUX0' ZERO"
-		cset "name='DMIC MUX0' ZERO"
-		cset "name='DEC0 Volume' 0"
-		cset "name='MultiMedia3 Mixer SLIMBUS_0_TX' 0"
-	]
-
-	Value {
-		CaptureChannels "1"
 	}
 }
