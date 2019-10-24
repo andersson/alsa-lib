@@ -39,6 +39,8 @@ SectionDevice."Speakers" {
 		cset "name='SLIMBUS_0_RX Audio Mixer MultiMedia1' 1"
 		cset "name='COMP7 Switch' 1"
 		cset "name='COMP8 Switch' 1"
+		cset "name='RX7 Digital Volume' 70"
+		cset "name='RX8 Digital Volume' 70"
 		## Speakers		
 		cset "name='SpkrLeft COMP Switch' 1"
 		cset "name='SpkrLeft BOOST Switch' 1"
@@ -86,8 +88,8 @@ SectionDevice."HeadPhones" {
 		cset "name='SLIMBUS_0_RX Audio Mixer MultiMedia1' 1"
 		cset "name='COMP1 Switch' 1"
 		cset "name='COMP2 Switch' 1"
-		cset "name='RX1 Digital Volume' 68"
-		cset "name='RX2 Digital Volume' 68"
+		cset "name='RX1 Mix Digital Volume' 68"
+		cset "name='RX2 Mix Digital Volume' 68"
 		cset "name='RX INT1 DEM MUX' CLSH_DSM_OUT"
 		cset "name='RX INT2 DEM MUX' CLSH_DSM_OUT"
 	]
