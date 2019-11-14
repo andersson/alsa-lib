@@ -1,10 +1,10 @@
-# Use case configuration for Lenovo-YOGA-C630-13Q50 board.
+# Use case configuration for LenovoYOGAC6301 board.
 # Author: Srinivas Kandagatla <srinivas.kandagatla@linaro.org>
 
 SectionVerb {
 
 	EnableSequence [
-		cdev "hw:Lenovo-YOGA-C630-13Q50"
+		cdev "hw:LenovoYOGAC6301"
 		cset "name='SLIM RX6 MUX' AIF1_PB"
 		cset "name='SLIM RX7 MUX' AIF1_PB"
 		cset "name='RX INT7_1 MIX1 INP0' RX6"
@@ -14,14 +14,14 @@ SectionVerb {
 	]
 
 	DisableSequence [
-                cdev "hw:Lenovo-YOGA-C630-13Q50"
+		cdev "hw:LenovoYOGAC6301"
 		cset "name='SLIMBUS_0_RX Audio Mixer MultiMedia1' 0"
 	]
 
 	# ALSA PCM
 	Value {
 		# ALSA PCM device for HiFi
-		PlaybackPCM "hw:Lenovo-YOGA-C630-13Q50,0"
+		PlaybackPCM "hw:LenovoYOGAC6301,0"
 	}
 }
 
@@ -29,7 +29,7 @@ SectionDevice."Speakers" {
 	Comment "Speakers playback"
 
 	EnableSequence [
-		cdev "hw:Lenovo-YOGA-C630-13Q50"
+		cdev "hw:LenovoYOGAC6301"
 		cset "name='SLIM RX6 MUX' AIF1_PB"
 		cset "name='SLIM RX7 MUX' AIF1_PB"
 		cset "name='SLIM RX1 MUX' ZERO"
@@ -51,7 +51,7 @@ SectionDevice."Speakers" {
 	]
 
 	DisableSequence [
-		cdev "hw:Lenovo-YOGA-C630-13Q50"
+		cdev "hw:LenovoYOGAC6301"
 		cset "name='SLIM RX6 MUX' ZERO"
 		cset "name='SLIM RX7 MUX' ZERO"
 		cset "name='COMP7 Switch' 0"
@@ -76,7 +76,7 @@ SectionDevice."HeadPhones" {
 	Comment "HeadPhones playback"
 
 	EnableSequence [
-		cdev "hw:Lenovo-YOGA-C630-13Q50"
+		cdev "hw:LenovoYOGAC6301"
 		cset "name='SLIM RX1 MUX' AIF1_PB"
 		cset "name='SLIM RX2 MUX' AIF1_PB"
 		cset "name='SLIM RX7 MUX' ZERO"
@@ -93,7 +93,7 @@ SectionDevice."HeadPhones" {
 	]
 
 	DisableSequence [
-		cdev "hw:Lenovo-YOGA-C630-13Q50"
+		cdev "hw:LenovoYOGAC6301"
 		cset "name='SLIM RX1 MUX' ZERO"
 		cset "name='SLIM RX2 MUX' ZERO"
 		cset "name='RX INT1_2 MUX' ZERO"
